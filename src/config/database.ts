@@ -7,6 +7,10 @@ export default TypeOrmModule.forRoot({
   username: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
-  entities: [],
+  entities: ['../modules/**/infra/typeorm/entities/*.ts'],
+  migrations: ['../shared/infra/typeorm/migrations/*.ts'],
+  cli: {
+    migrationsDir: '../shared/infra/typeorm/migrations',
+  },
   synchronize: true,
 })
