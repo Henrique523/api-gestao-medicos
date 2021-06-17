@@ -1,4 +1,4 @@
-import BaseEntity from 'src/shared/infra/typeorm/entities/BaseEntity'
+import BaseEntity from '@shared/infra/typeorm/entities/BaseEntity'
 import { Column, Entity, JoinTable, ManyToMany } from 'typeorm'
 import { Speciality } from './Specialities'
 
