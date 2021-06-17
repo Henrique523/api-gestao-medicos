@@ -6,11 +6,11 @@ export default abstract class BaseEntity {
   id: number
 
   @Exclude()
-  @CreateDateColumn({ type: 'timestamp', nullable: false, default: 'now()' })
+  @CreateDateColumn({ type: 'timestamp', nullable: false, default: 0 })
   created_at: Date
 
   @Exclude()
-  @UpdateDateColumn({ type: 'timestamp', nullable: false, default: 'now()' })
+  @UpdateDateColumn({ type: 'timestamp', nullable: false, default: 0 })
   updated_at: Date
 
   @Exclude()

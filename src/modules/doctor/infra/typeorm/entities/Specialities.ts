@@ -1,7 +1,7 @@
 import { Entity, ManyToMany, PrimaryColumn } from 'typeorm'
 import { Doctor } from './Doctor'
 
-@Entity('specialities')
+@Entity('Specialities')
 export class Speciality {
   @PrimaryColumn({ type: 'varchar', nullable: false, generated: false })
   description: string

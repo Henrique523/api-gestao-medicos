@@ -2,7 +2,7 @@ import BaseEntity from '@shared/infra/typeorm/entities/BaseEntity'
 import { Column, Entity, JoinTable, ManyToMany } from 'typeorm'
 import { Speciality } from './Specialities'
 
-@Entity('doctors')
+@Entity('Doctors')
 export class Doctor extends BaseEntity {
   @Column({ type: 'varchar', nullable: false })
   name: string
