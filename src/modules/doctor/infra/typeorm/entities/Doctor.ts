@@ -4,10 +4,10 @@ import { Speciality } from './Specialities'
 
 @Entity('Doctors')
 export class Doctor extends BaseEntity {
-  @Column({ type: 'varchar', nullable: false })
+  @Column({ type: 'varchar', nullable: false, length: 120 })
   name: string
 
-  @Column({ type: 'varchar', nullable: false })
+  @Column({ type: 'varchar', nullable: false, length: 7 })
   crm: string
 
   @Column({ type: 'varchar', nullable: false })
@@ -16,7 +16,7 @@ export class Doctor extends BaseEntity {
   @Column({ type: 'varchar', nullable: false })
   cellphone: string
 
-  @Column({ type: 'varchar', nullable: false })
+  @Column({ type: 'varchar', nullable: false, length: 8 })
   cep: string
 
   @ManyToMany(() => Speciality, speciality => speciality.doctors)
